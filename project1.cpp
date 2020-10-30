@@ -11,7 +11,6 @@ int main()
    {
   //create the menu for the user to choose scenario number and scheduling algorithm
         int scenario = 0;
-        cout << endl;
         cout << " Please Choose One of the Following: \n";
         cout << " 1. Scenario 1 Using FIFO\n";
         cout << " 2. Scenario 1 Using SJF\n";
