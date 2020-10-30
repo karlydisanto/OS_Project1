@@ -7,19 +7,10 @@
 #include <iostream>
 using namespace std;
 
-int scenario = 0;
-void menu();
-
-int main(){
-  cout << endl;
-  menu();
-}
-
-//MENU
-
-void menu ()
+int main()
    {
   //create the menu for the user to choose scenario number and scheduling algorithm
+        int scenario = 0;
         cout << endl;
         cout << " Please Choose One of the Following: \n";
         cout << " 1. Scenario 1 Using FIFO\n";
