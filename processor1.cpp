@@ -2,4 +2,6 @@
 #include<iostrem>
 #include<queue>
 
-void processor1(
+void processor1(long speed, long memory, long currProcess){
+  speed =  
+}
