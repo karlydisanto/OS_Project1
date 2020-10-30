@@ -38,7 +38,7 @@ int main()
         for (int i = 0; i <= 40; i++){
           long long servTime =serv(seed);
           int memSize = mem(seed); 
-          cout << servTime << memSize << "\n";
+          cout << servTime << "\t" << memSize << "\n";
         }
            
      //generates based on scenario entered
