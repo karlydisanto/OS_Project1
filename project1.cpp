@@ -5,6 +5,8 @@
 //Project 1 Schedule Simulator 
 
 #include <iostream>
+#include<queue>
+#include<random>
 using namespace std;
 
 int main()
@@ -25,21 +27,20 @@ int main()
   //user can enter the seed value to generate random service times and memory requirements
         queue<long long> p;  
         long long seedValue;
-        cout << "Enter a seed value"
+        cout << "Enter a seed value";
         cin >> seedValue;
   //64 bit seed
         mt19937_64 seed(seedValue);
   //the random values that the service time and memory can be
-        uni_cost_distro<long long> serv(1000000, 1000000000000);
-        uni_cost_distro<int> mem(1,8);
+        uniform_int_distribution<long long> serv(1000000, 1000000000000);
+        uniform_int_distribution<int> mem(1,8);
   //creates the 40 processes with random service time and mem requirements based on the seed provided and then puts them into a queue
         for (int i = 0; i <= 40; i++){
           long long servTime =serv(seed);
           int memSize = mem(seed); 
           cout << servTime << memSize << "\n";
-          
-          
-
+        }
+           
      //generates based on scenario entered
        if (scenario == 1)
        {
