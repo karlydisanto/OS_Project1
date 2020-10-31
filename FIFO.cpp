@@ -1,5 +1,5 @@
 
-//Passing processor objects to the different algorithm
+//Passing processor objects each algorithm
 #include<processor1>
 #include<processor2>
 #include<processor3>
