@@ -26,25 +26,25 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
     if(!P1 && !P2 && !P3 && !P4) {
       //WAIT FOR THE REAMINING TIME TO BE 0
       //if there is still time remaining, then do something
-      if(p.timeRemaining > 0) {
+      if(p1.timeRemaining > 0) {
         waiting = waiting + 1;
       }
       else 
       //otherwise, there is no time remaining and open the processor back up
         P1 = false;
-      if(p.timeRemaining > 0) {
+      if(p2.timeRemaining > 0) {
         waiting = waiting + 1;
       }
       else 
       //otherwise, there is no time remaining and open the processor back up
         P2 = false;
-      if(p.timeRemaining > 0) {
+      if(p3.timeRemaining > 0) {
         waiting = waiting + 1;
       }
       else 
       //otherwise, there is no time remaining and open the processor back up
         P3 = false;
-      if(p.timeRemaining > 0) {
+      if(p4.timeRemaining > 0) {
         waiting = waiting + 1;
       }
       else 
