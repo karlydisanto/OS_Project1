@@ -6,6 +6,7 @@
 #include<iostream>
 #include<queue>
 #include "processor.h"
+#include "FIFO.h"
 using namespace std;
 
 //false = the processor is not full
