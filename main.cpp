@@ -64,7 +64,7 @@ int main()
        else if (scenario == 2)
        {
          //SJF using scenario 1
-           printf("Hello World2");
+           //SJF(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
        }
        else if (scenario == 3)
        {
