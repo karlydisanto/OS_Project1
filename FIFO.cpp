@@ -21,7 +21,7 @@ processor p4;
 
 //passing memory and speed requirements based on different scenarios
 void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting){
-  while(!p.empty())){ 
+  while(!p.empty()){ 
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
       //WAIT FOR THE REAMINING TIME TO BE 0
