@@ -7,6 +7,7 @@
 #include <iostream>
 #include<queue>
 #include<random>
+#include "FIFO.h"
 using namespace std;
 
 int main()
