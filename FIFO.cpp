@@ -1,4 +1,3 @@
-
 //Passing processor objects each algorithm
 // #include<processor1>
 // #include<processor2>
@@ -21,14 +20,14 @@ processor p3;
 processor p4;
 
 //passing memory and speed requirements based on different scenarios
-void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT){
-  while(!p.empty())){
+void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting){
+  while(!p.empty())){ 
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
       //WAIT FOR THE REAMINING TIME TO BE 0
       //if there is still time remaining, then do something
-      if(p1.timeRemaining > 0) {
-         //IDK
+      if(**p1.timeRemaining > 0) {
+         turnaround += 
       }
       else 
       //otherwise, there is no time remaining and open the processor back up
@@ -51,11 +50,11 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
            long long servTime = sT.front();
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
+            turnaround += sT.front();
             p.pop();
             m.pop();
             sT.pop();
-            P1 = true; 
-             
+            P1 = true;  
            }
         }
         else if(P2) {
@@ -66,6 +65,7 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
            long long servTime = sT.front();
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
+            turnaround += sT.front();
             p.pop();
             m.pop();
             sT.pop();
@@ -80,6 +80,7 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
            long long servTime = sT.front();
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
+            turnaround += sT.front();
             p.pop();
             m.pop();
             sT.pop();
@@ -94,6 +95,7 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
            long long servTime = sT.front();
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
+            turnaround += sT.front();
             p.pop();
             m.pop();
             sT.pop();
