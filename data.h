@@ -1,5 +1,6 @@
-struct data {
+struct processor {
   long long timeRemaining;
-  long long processID;
-  boolean complete;
+  int currProcessID;
+  long long currProcessST;
+  int currProcessMem;
 };
