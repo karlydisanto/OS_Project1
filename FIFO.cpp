@@ -7,30 +7,41 @@
 #include<iostream>
 #include<queue>
 
+//false = the processor is not full
+//true = the processor is full
+boolean P1 = false
+boolean P2 = false;
+boolean P3 = false;
+boolean P4 = false;
+
 
 //passing memory and speed requirements based on different scenarios
 void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<long long> processes){
   long long processesCompleted = 0;
   while(processesCompleted != processes.size()){
-//check if any of the processors are not empty (full)
-    if(processor1.isFull()) && processor2.isFull() && processor3.isFull() || processor4.isFull()) {
+//check if any of the processors are full
+    if(!P1 || !P2 || !P3 || !P4) {
        //DO SOMETHING
     }
     else {
 //if any of the processors are empty pop the next process off the queue into that processor
-        if(processor1.isEmpty()){
+        if(P1) {
+//create a temp which holds the current process at the front
+           long long temp = processes.front();
+//get the memory size to check if it fits in the processor
+           int memOfProcess = temp.servTime;
+          
            processes.pop();
         }
-        else if(processor2.isEmpty(){
+        else if(P2) {
            processes.pop(); 
         }
-        else if(processor3.isEmpty(){
+        else if(P3) {
            processes.pop(); 
         }
-        else if(processor4.isEmpty(){
+        else if(P4) {
            processes.pop(); 
-        }
-         
+        }  
     }
   }
 }
