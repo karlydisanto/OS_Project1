@@ -25,7 +25,9 @@ int main()
         cin >> scenario;
   
   //user can enter the seed value to generate random service times and memory requirements
-        queue<long long> p;  
+        queue<int> p;  
+        queue<int> m;
+        queue<long long> sT
         long long seedValue;
         cout << "Enter a seed value";
         cin >> seedValue;
@@ -39,7 +41,11 @@ int main()
           long long servTime =serv(seed);
           int memSize = mem(seed); 
           cout << servTime << "\t" << memSize << "\n";
+          p.push(i);
+          m.push(memSize);
+          sT.push(servTime);
         }
+         
            
      //generates based on scenario entered
        if (scenario == 1)
