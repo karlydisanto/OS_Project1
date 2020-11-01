@@ -6,7 +6,7 @@
 // #include<processor4>
 #include<iostream>
 #include<queue>
-#include<processor.h>
+#include "processor.h"
 
 //false = the processor is not full
 //true = the processor is full
@@ -25,8 +25,22 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
   while(!p.empty())){
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
-       //DO SOMETHING
+      //WAIT FOR THE REAMINING TIME TO BE 0
+      //if there is still time remaining, then do something
+      if(p1.timeRemaining > 0) {
+         //IDK
+      }
+      else 
+      //otherwise, there is no time remaining and open the processor back up
+        P1 = false;
     }
+    
+    
+    
+    
+    
+    
+    
     else {
 //if any of the processors are empty pop the next process off the queue into that processor
         if(P1) {
