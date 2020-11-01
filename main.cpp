@@ -45,6 +45,14 @@ int main()
           m.push(memSize);
           sT.push(servTime);
         }
+        while(!p.empty()) {
+            cout<< " " << p.front() << "\n";
+            p.pop();
+            cout<< " " << sT.front() << "\n";
+            sT.pop();
+            cout << " " << m.front() << "\n";
+            m.pop();
+        }
          
            
      //generates based on scenario entered
