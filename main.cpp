@@ -59,7 +59,7 @@ int main()
        if (scenario == 1)
        {
          //FIFO using scenario 1
-           printf("Hello World1");
+           FIFO(
        }
        else if (scenario == 2)
        {
