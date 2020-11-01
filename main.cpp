@@ -59,7 +59,7 @@ int main()
        if (scenario == 1)
        {
          //FIFO using scenario 1
-           FIFO(
+           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
        }
        else if (scenario == 2)
        {
