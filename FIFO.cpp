@@ -68,6 +68,9 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
             turnaround += sT.front();
+            cout << "Process number: " << "\t" << pNumber;
+            cout << "Service time:" << "\t" << servTime;
+            cout << "Memory Requirement" << "\t" << memSize;
             p.pop();
             m.pop();
             sT.pop();
@@ -83,6 +86,10 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
             turnaround += sT.front();
+            processID = p.front().getpid();
+            cout << "Process number: " << "\t" << pNumber;
+            cout << "Service time:" << "\t" << servTime;
+            cout << "Memory Requirement" << "\t" << memSize;
             p.pop();
             m.pop();
             sT.pop();
@@ -98,6 +105,10 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
             turnaround += sT.front();
+            processID = p.front().getpid();
+            cout << "Process number: " << "\t" << pNumber;
+            cout << "Service time:" << "\t" << servTime;
+            cout << "Memory Requirement" << "\t" << memSize;
             p.pop();
             m.pop();
             sT.pop();
@@ -113,6 +124,10 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
             turnaround += sT.front();
+            processID = p.front().getpid();
+            cout << "Process number: " << "\t" << pNumber;
+            cout << "Service time:" << "\t" << servTime;
+            cout << "Memory Requirement" << "\t" << memSize;
             p.pop();
             m.pop();
             sT.pop();
@@ -121,4 +136,7 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
         }  
     }
   }
+  cout << "Total turnaround time" << turnaround;
+  cout << "Total wait time" << waiting;
+  
 }
