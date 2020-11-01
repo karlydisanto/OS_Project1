@@ -1,11 +1,12 @@
 
 //Passing processor objects each algorithm
-#include<processor1>
-#include<processor2>
-#include<processor3>
-#include<processor4>
+// #include<processor1>
+// #include<processor2>
+// #include<processor3>
+// #include<processor4>
 #include<iostream>
 #include<queue>
+#include<processor.h>
 
 //false = the processor is not full
 //true = the processor is full
@@ -14,10 +15,13 @@ boolean P2 = false;
 boolean P3 = false;
 boolean P4 = false;
 
+processor p1;
+processor p2;
+processor p3;
+processor p4;
 
 //passing memory and speed requirements based on different scenarios
 void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT){
-  long long processesCompleted = 0;
   while(!p.empty())){
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
