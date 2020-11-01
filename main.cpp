@@ -27,7 +27,7 @@ int main()
   //user can enter the seed value to generate random service times and memory requirements
         queue<int> p;  
         queue<int> m;
-        queue<long long> sT
+        queue<long long> sT;
         long long seedValue;
         cout << "Enter a seed value";
         cin >> seedValue;
