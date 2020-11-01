@@ -69,32 +69,32 @@ int main()
        else if (scenario == 3)
        {
          //FIFO using scenario 2
-           printf("Hello World3");
+           FIFO(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
        }
        else if (scenario == 4)
         {
          //SJF using scenario 2
-           printf("Hello World4");
+           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
         }
        else if (scenario == 5)
         {
          //FIFO using scenario 3
-           printf("Hello World5");
+           FIFO(8, 8, 8, 8, 2, 2, 3, 4, p, m, sT);
         }
        else if (scenario == 6)
         {
          //SJF using scenario 3
-           printf("Hello World6");
+           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
         }
        else if (scenario == 7)
         {
          //FIFO using scenario 4
-           printf("Hello World7");
+           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
         }
        else if (scenario == 8)
         {
          //SJF using scenario 4
-          printf("Hello World8");
+          //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
         }
       }
 
