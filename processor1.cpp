@@ -3,5 +3,6 @@
 #include<queue>
 
 void processor1(long speed, long memory, long currProcess){
-  speed =  
-}
+   
+    cout << " Process ID: " << processID << "\n";
+    return speed, memory, currProcess;
