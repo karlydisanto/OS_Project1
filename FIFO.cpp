@@ -9,10 +9,10 @@
 
 //false = the processor is not full
 //true = the processor is full
-boolean P1 = false
-boolean P2 = false;
-boolean P3 = false;
-boolean P4 = false;
+bool P1 = false
+bool P2 = false;
+bool P3 = false;
+bool P4 = false;
 
 processor p1;
 processor p2;
