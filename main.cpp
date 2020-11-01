@@ -11,6 +11,8 @@ using namespace std;
 
 int main()
    {
+         long int turnaround = 0;
+         long int waiting = 0;
   //create the menu for the user to choose scenario number and scheduling algorithm
         int scenario = 0;
         cout << " Please Choose One of the Following: \n";
@@ -59,42 +61,42 @@ int main()
        if (scenario == 1)
        {
          //FIFO using scenario 1
-           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
+           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 2)
        {
          //SJF using scenario 1
-           //SJF(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
+           //SJF(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 3)
        {
          //FIFO using scenario 2
-           FIFO(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
+           FIFO(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 4)
         {
          //SJF using scenario 2
-           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
+           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 5)
         {
          //FIFO using scenario 3
-           FIFO(8, 8, 8, 8, 2, 2, 3, 4, p, m, sT);
+           FIFO(8, 8, 8, 8, 2, 2, 3, 4, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 6)
         {
          //SJF using scenario 3
-           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
+           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 7)
         {
          //FIFO using scenario 4
-           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT);
+           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 8)
         {
          //SJF using scenario 4
-          //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT);
+          //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
       }
 
