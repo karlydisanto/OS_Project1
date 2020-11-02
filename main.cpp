@@ -67,12 +67,12 @@ int main()
        if (scenario == 1)
        {
          //FIFO using scenario 1
-           cout << FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 2)
        {
          //SJF using scenario 1
-           //SJF(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
        }
        else if (scenario == 3)
        {
