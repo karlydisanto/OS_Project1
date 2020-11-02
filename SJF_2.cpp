@@ -21,36 +21,48 @@ processor p2;
 processor p3;
 processor p4;
 
+priority_queue<int> processNumber
+priority_queue<int> memory;
+priority_queue<long long> servT;
+
 //passing memory and speed requirements based on different scenarios
-void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting){
+void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting){
   while(!p.empty()){ 
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
       //WAIT FOR THE REAMINING TIME TO BE 0
       //if there is still time remaining, then do something
       if(p1.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service;
       }
       else {
       //otherwise, there is no time remaining and open the processor back up
         P1 = false;
       }
       if(p2.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service;
       }
       else {
       //otherwise, there is no time remaining and open the processor back up
         P2 = false;
       }
       if(p3.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service;
       }
       else  {
       //otherwise, there is no time remaining and open the processor back up
         P3 = false;
       }
       if(p4.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service;
       }
       else { 
       //otherwise, there is no time remaining and open the processor back up
@@ -65,6 +77,9 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
+           processNumber.push(pNumber);
+           memory.push(memSize);
+           servT.push(servTime);
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem1) {
             turnaround += sT.front();
@@ -83,8 +98,11 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
+           processNumber.push(pNumber);
+           memory.push(memSize);
+           servT.push(servTime);
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
-           if(memSize <= mem1) {
+           if(memSize <= mem2) {
             turnaround += sT.front();
             processID = p.front().getpid();
             cout << "Process number: " << "\t" << pNumber;
@@ -102,8 +120,11 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
+           processNumber.push(pNumber);
+           memory.push(memSize);
+           servT.push(servTime);
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
-           if(memSize <= mem1) {
+           if(memSize <= mem2) {
             turnaround += sT.front();
             processID = p.front().getpid();
             cout << "Process number: " << "\t" << pNumber;
@@ -121,8 +142,11 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
 //get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
+           processNumber.push(pNumber);
+           memory.push(memSize);
+           servT.push(servTime);
 //compare the mem size of the process and the processor (to see if the process fits in the processor)
-           if(memSize <= mem1) {
+           if(memSize <= mem3) {
             turnaround += sT.front();
             processID = p.front().getpid();
             cout << "Process number: " << "\t" << pNumber;
@@ -138,3 +162,5 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
   }
   cout << "Total turnaround time" << turnaround;
   cout << "Total wait time" << waiting;
+  cout << "Average turnaround" << turnaround/40;
+  cout << "Average waiting" << waiting/40;
