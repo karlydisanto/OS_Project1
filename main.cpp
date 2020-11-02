@@ -14,8 +14,8 @@ using namespace std;
 
 int main()
    {
-         long int turnaround = 0;
-         long int waiting = 0;
+         long[] turnaround[40];
+         long[] waiting[40];
   //create the menu for the user to choose scenario number and scheduling algorithm
         int scenario = 0;
         cout << " Please Choose One of the Following: \n";
@@ -82,7 +82,7 @@ int main()
        else if (scenario == 4)
         {
          //SJF using scenario 2
-           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
         }
        else if (scenario == 5)
         {
