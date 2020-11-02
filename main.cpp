@@ -47,7 +47,7 @@ int main()
         for (int i = 0; i <= 40; i++){
           long long servTime =serv(seed);
           int memSize = mem(seed); 
-          cout << servTime << "\t" << memSize << "\n";
+          cout << "Service Time: " << servTime << "\t" << Memory Size: " << memSize << "GB" << "\n";
           p.push(i);
           m.push(memSize);
           sT.push(servTime);
