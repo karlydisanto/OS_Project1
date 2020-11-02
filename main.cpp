@@ -14,8 +14,8 @@ using namespace std;
 
 int main()
    {
-         long turnaround;
-         long waiting;
+         long turnaround = 0;
+         long waiting = 0;
   //create the menu for the user to choose scenario number and scheduling algorithm
         int scenario = 0;
         cout << " Please Choose One of the Following: \n";
