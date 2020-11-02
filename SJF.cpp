@@ -9,9 +9,18 @@
 using namespace std;
 
 void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting) {
-  //sort the queue of processes from shortest time to most time
+  int process1 = p.front();
+  int process2 = p.back();
+  long long servTime1 = sT.front();
+  long long servTime2 = sT.back();
+  bool compare = false;
   
-  //check if any of the processors are full
+  if(servTime1 > servTime2) {
+    compare == false;
+  }
+  else {
+   compare == true; 
+  }
   
-  //if not, the pop the next process in the queue onto the processor
+  sort(servTime1, servTime2, );
 }
