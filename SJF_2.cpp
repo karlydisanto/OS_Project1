@@ -1,3 +1,8 @@
+//Name: Alexander Giaquinto and Karly DiSanto
+//Professor: Helsing
+//Class: Operating Systems
+//Date: November 1, 2020
+
 //Passing processor objects each algorithm
 // #include<processor1>
 // #include<processor2>
@@ -16,11 +21,13 @@ bool P2 = false;
 bool P3 = false;
 bool P4 = false;
 
+//creating processors from the struct
 processor p1;
 processor p2;
 processor p3;
 processor p4;
 
+//priority queues to sort the processes shortest service time to longest
 priority_queue<int> processNumber
 priority_queue<int> memory;
 priority_queue<long long> servT;
@@ -31,44 +38,44 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
       //WAIT FOR THE REAMINING TIME TO BE 0
-      //if there is still time remaining, then do something
+      //if there is still time remaining, then add to the waiting and turnaround time
       if(p1.timeRemaining > 0) {
         long long service = sT.front();
         waiting = waiting + 1;
         turnaround = turnaround + service;
       }
       else {
-      //otherwise, there is no time remaining and open the processor back up
         P1 = false;
       }
+      //same as p1
       if(p2.timeRemaining > 0) {
         long long service = sT.front();
         waiting = waiting + 1;
         turnaround = turnaround + service;
       }
       else {
-      //otherwise, there is no time remaining and open the processor back up
         P2 = false;
       }
+      //same as p1
       if(p3.timeRemaining > 0) {
         long long service = sT.front();
         waiting = waiting + 1;
         turnaround = turnaround + service;
       }
       else  {
-      //otherwise, there is no time remaining and open the processor back up
         P3 = false;
       }
+      //same as p1
       if(p4.timeRemaining > 0) {
         long long service = sT.front();
         waiting = waiting + 1;
         turnaround = turnaround + service;
       }
       else { 
-      //otherwise, there is no time remaining and open the processor back up
         P4 = false;
       }
     }
+    
     else {
 //if any of the processors are empty pop the next process off the queue into that processor
         if(P1) {
@@ -77,6 +84,7 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
 //get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
+//pushes the process information into the correct priority queue to be scheduled
            processNumber.push(pNumber);
            memory.push(memSize);
            servT.push(servTime);
@@ -86,22 +94,21 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
             cout << "Process number: " << "\t" << pNumber;
             cout << "Service time:" << "\t" << servTime;
             cout << "Memory Requirement" << "\t" << memSize;
+//pops off the process queue 
             p.pop();
             m.pop();
             sT.pop();
             P1 = true;  
            }
         }
+//same as P1
         else if(P2) {
- //create a temp which holds the current process at the front
            int pNumber = p.front();
-//get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
            processNumber.push(pNumber);
            memory.push(memSize);
            servT.push(servTime);
-//compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem2) {
             turnaround += sT.front();
             processID = p.front().getpid();
@@ -114,16 +121,14 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
             P2 = true;
            } 
         }
+//same as P1
         else if(P3) {
-//create a temp which holds the current process at the front
            int pNumber = p.front();
-//get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
            processNumber.push(pNumber);
            memory.push(memSize);
            servT.push(servTime);
-//compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem2) {
             turnaround += sT.front();
             processID = p.front().getpid();
@@ -136,16 +141,14 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
             P3 = true;
            } 
         }
+//same as P1
         else if(P4) {
-//create a temp which holds the current process at the front
            int pNumber = p.front();
-//get the memory size to check if it fits in the processor
            int memSize = m.front();
            long long servTime = sT.front();
            processNumber.push(pNumber);
            memory.push(memSize);
            servT.push(servTime);
-//compare the mem size of the process and the processor (to see if the process fits in the processor)
            if(memSize <= mem3) {
             turnaround += sT.front();
             processID = p.front().getpid();
@@ -160,6 +163,7 @@ void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int spe
         }  
     }
   }
+  //Outputs data
   cout << "Total turnaround time" << turnaround;
   cout << "Total wait time" << waiting;
   cout << "Average turnaround" << turnaround/40;
