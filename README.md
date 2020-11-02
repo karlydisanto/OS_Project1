@@ -14,5 +14,7 @@ Program is run through the main file and the user is prompted to enter a scenari
 
 The user then inputs a seed value to randomly populate the processes queues (memory requirements and service time)
 
-PICTURE OF SEED VALUE INPUT
+
+![Image of Seed](https://github.com/karlydisanto/OS_Project1/blob/main/seedValue.png)
+
 
