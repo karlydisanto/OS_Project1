@@ -26,7 +26,7 @@ priority_queue<int> memory;
 priority_queue<long long> servT;
 
 //passing memory and speed requirements based on different scenarios
-void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long int turnaround, long int waiting){
+void SJF(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int speed3, int speed4, queue<int> p, queue<int> m, queue<long long> sT, long turnaround, long  waiting){
   while(!p.empty()){ 
 //check if all of the processors are full
     if(!P1 && !P2 && !P3 && !P4) {
