@@ -6,7 +6,7 @@
 #include<iostream>
 #include<queue>
 #include "processor.h"
-#include "FIFO.h"
+#include "SFJ_2.h"
 using namespace std;
 
 //false = the processor is not full
