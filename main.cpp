@@ -33,7 +33,7 @@ int main()
         queue<int> p;  
         queue<int> m;
         queue<long long> sT;
-        struct process p;
+        process proc;
         long long seedValue;
         cout << "Enter a seed value";
         cin >> seedValue;
@@ -50,8 +50,8 @@ int main()
           p.push(i);
           m.push(memSize);
           sT.push(servTime);
-          p.serviceTime[i] = serTime;
-          p.memory[i] = memSize;
+          proc.serviceTime = serTime;
+          proc.memory = memSize;
         }
 //         while(!p.empty()) {
 //             cout<< " " << p.front() << "\n";
@@ -67,7 +67,7 @@ int main()
        if (scenario == 1)
        {
          //FIFO using scenario 1
-           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           //FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 2)
        {
@@ -77,17 +77,17 @@ int main()
        else if (scenario == 3)
        {
          //FIFO using scenario 2
-           FIFO(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           //FIFO(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 4)
         {
          //SJF using scenario 2
-           SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
+           //SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
         }
        else if (scenario == 5)
         {
          //FIFO using scenario 3
-           FIFO(8, 8, 8, 8, 2, 2, 3, 4, p, m, sT, turnaround, waiting);
+           //FIFO(8, 8, 8, 8, 2, 2, 3, 4, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 6)
         {
@@ -97,7 +97,7 @@ int main()
        else if (scenario == 7)
         {
          //FIFO using scenario 4
-           FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           //FIFO(8, 8, 8, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 8)
         {
