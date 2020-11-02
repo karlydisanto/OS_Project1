@@ -29,28 +29,36 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
       //WAIT FOR THE REAMINING TIME TO BE 0
       //if there is still time remaining, then do something
       if(p1.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service
       }
       else {
       //otherwise, there is no time remaining and open the processor back up
         P1 = false;
       }
       if(p2.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service;
       }
       else {
       //otherwise, there is no time remaining and open the processor back up
         P2 = false;
       }
       if(p3.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service
       }
       else  {
       //otherwise, there is no time remaining and open the processor back up
         P3 = false;
       }
       if(p4.timeRemaining > 0) {
+        long long service = sT.front();
         waiting = waiting + 1;
+        turnaround = turnaround + service
       }
       else { 
       //otherwise, there is no time remaining and open the processor back up
@@ -138,5 +146,7 @@ void FIFO(int mem1, int mem2, int mem3, int mem4, int speed1, int speed2, int sp
   }
   cout << "Total turnaround time" << turnaround;
   cout << "Total wait time" << waiting;
+  cout << "Average turnaround" << turnaround/40;
+  cout << "Average waiting" << waiting/40;
   
 }
