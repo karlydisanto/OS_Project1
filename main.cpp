@@ -8,6 +8,8 @@
 #include<queue>
 #include<random>
 #include "FIFO.h"
+#include "process.h"
+
 using namespace std;
 
 int main()
@@ -31,6 +33,7 @@ int main()
         queue<int> p;  
         queue<int> m;
         queue<long long> sT;
+        struct process p;
         long long seedValue;
         cout << "Enter a seed value";
         cin >> seedValue;
@@ -47,15 +50,17 @@ int main()
           p.push(i);
           m.push(memSize);
           sT.push(servTime);
+          p.serviceTime[i] = serTime;
+          p.memory[i] = memSize;
         }
-        while(!p.empty()) {
-            cout<< " " << p.front() << "\n";
-            p.pop();
-            cout<< " " << sT.front() << "\n";
-            sT.pop();
-            cout << " " << m.front() << "\n";
-            m.pop();
-        }
+//         while(!p.empty()) {
+//             cout<< " " << p.front() << "\n";
+//             p.pop();
+//             cout<< " " << sT.front() << "\n";
+//             sT.pop();
+//             cout << " " << m.front() << "\n";
+//             m.pop();
+//         }
          
            
      //generates based on scenario entered
