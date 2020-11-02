@@ -14,8 +14,8 @@ using namespace std;
 
 int main()
    {
-         long[] turnaround[40];
-         long[] waiting[40];
+         long turnaround;
+         long waiting;
   //create the menu for the user to choose scenario number and scheduling algorithm
         int scenario = 0;
         cout << " Please Choose One of the Following: \n";
@@ -33,7 +33,7 @@ int main()
         queue<int> p;  
         queue<int> m;
         queue<long long> sT;
-        process proc;
+        //process proc;
         long long seedValue;
         cout << "Enter a seed value";
         cin >> seedValue;
@@ -50,8 +50,8 @@ int main()
           p.push(i);
           m.push(memSize);
           sT.push(servTime);
-          proc.serviceTime = serTime;
-          proc.memory = memSize;
+          //proc[i].serviceTime = serTime;
+          //proc[i].memory = memSize;
         }
 //         while(!p.empty()) {
 //             cout<< " " << p.front() << "\n";
@@ -72,7 +72,7 @@ int main()
        else if (scenario == 2)
        {
          //SJF using scenario 1
-           SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
+           SJF_2(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
        }
        else if (scenario == 3)
        {
@@ -82,7 +82,7 @@ int main()
        else if (scenario == 4)
         {
          //SJF using scenario 2
-           //SJF(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
+           //SJF_2(2, 2, 4, 8, 3, 3, 3, 3, proc, turnaround, waiting);
         }
        else if (scenario == 5)
         {
@@ -92,7 +92,7 @@ int main()
        else if (scenario == 6)
         {
          //SJF using scenario 3
-           //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+           //SJF_2(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
        else if (scenario == 7)
         {
@@ -102,7 +102,7 @@ int main()
        else if (scenario == 8)
         {
          //SJF using scenario 4
-          //SJF(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
+          //SJF_2(2, 2, 4, 8, 3, 3, 3, 3, p, m, sT, turnaround, waiting);
         }
       }
 
