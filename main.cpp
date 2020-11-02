@@ -9,6 +9,7 @@
 #include<random>
 #include "FIFO.h"
 #include "process.h"
+#include "SFJ_2.h"
 
 using namespace std;
 
