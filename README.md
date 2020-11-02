@@ -8,7 +8,9 @@ This project is a C++ program that siumlates a scheduler. The simulator contains
 ## Usage
 Program is run through the main file and the user is prompted to enter a scenario (1,2,3,4) and choice of algorithm (FIFO or SJF)
 
-PICTURE OF PROMPT
+![Image of Scenario](https://github.com/karlydisanto/OS_Project1/blob/main/chooseScenario.png)
+
+
 
 The user then inputs a seed value to randomly populate the processes queues (memory requirements and service time)
 
